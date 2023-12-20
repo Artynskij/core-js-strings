@@ -41,10 +41,9 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  console.log(`${value} - ${typeof value}`);
-  // if (!value.valueOf()) {
-  //   return false;
-  // }
+  if (value === undefined || value === null) {
+    return false;
+  }
   return typeof value.valueOf() === 'string' || false;
 }
 
